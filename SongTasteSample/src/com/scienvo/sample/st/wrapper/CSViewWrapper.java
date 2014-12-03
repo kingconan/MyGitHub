@@ -68,9 +68,9 @@ public class CSViewWrapper extends BasePagerView implements
 				.displayer(new SimpleBitmapDisplayer()) // default
 				.build();
 
-		if (NetUtil.isWifiConnected(context)) {
-			OfflineDownloadService.start();
-		}
+//		if (NetUtil.isWifiConnected(context)) {
+//			OfflineDownloadService.start();
+//		}
 	}
 
 	private void L(String msg) {
