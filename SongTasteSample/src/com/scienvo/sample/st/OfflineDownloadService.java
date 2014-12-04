@@ -32,10 +32,31 @@ public class OfflineDownloadService extends IntentService{
 		final int page = 1;
 		String url = "http://www.weiduwu.net/app/getContentList.json";
 		final String contentUrl = "http://www.weiduwu.net/app/getContentByid.json";
-				if(paraItems == null) return;
-				for(CSItem d : paraItems){
-					requestContent(contentUrl,d);
-				}
+		queue = Volley.newRequestQueue(this);
+		StringRequest sr = new StringRequest(Request.Method.POST, url,
+				new Response.Listener<String>() {
+					@Override
+					public void onResponse(String response) {
+						CSItem[] data =  BaseModel.fromGson(response, CSItem[].class);
+						if(data == null) return;
+						for(CSItem d : data){
+							requestContent(contentUrl,d);
+						}
+					}
+				}, new Response.ErrorListener() {
+					@Override
+					public void onErrorResponse(VolleyError error) {
+					}
+				}) {
+			@Override
+			protected Map<String, String> getParams() {
+				Map<String, String> params = new HashMap<String, String>();
+				params.put("page", String.valueOf(page));
+				params.put("pageSize", String.valueOf(20));
+				return params;
+			}
+		};
+		queue.add(sr);
 	}
 	
 	private void requestContent(final String contentUrl,final CSItem item){
@@ -71,8 +92,7 @@ public class OfflineDownloadService extends IntentService{
 		Log.d("SongTaste", msg);
 	}
 	
-	public static void start(CSItem[] d){
-		paraItems = d;
+	public static void start(){
 		Intent intent = new Intent(MyApplication.getSugarContext(),OfflineDownloadService.class);
 		MyApplication.getSugarContext().startService(intent);
 	}
@@ -90,7 +110,5 @@ public class OfflineDownloadService extends IntentService{
 			Log.d("SongTaste", msg);
 		}
 	}
-	
-	private static CSItem[] paraItems;
 	
 }

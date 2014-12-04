@@ -32,6 +32,8 @@ import com.orm.SugarRecord;
 import com.scienvo.sample.st.DeviceUtil;
 import com.scienvo.sample.st.OfflineDownloadService.DBCSItem;
 import com.scienvo.sample.st.data.HistoryCSItem;
+import com.scienvo.sample.st.itemanimator.MyItemAnimator;
+import com.scienvo.sample.st.itemanimator.SlideInFromLeftItemAnimator;
 import com.scienvo.sample.st.model.BaseModel;
 import com.scienvo.sample.st.widget.LoadMoreListView.BaseListViewOnScroll;
 import com.scienvo.sample.st.wrapper.CSViewWrapper.CSItem;
@@ -39,6 +41,7 @@ import com.travo.sample.st.R;
 
 public class CSContentActivity extends ActionBarActivity implements
 		SwipeRefreshLayout.OnRefreshListener, BaseListViewOnScroll {
+
 	SwipeRefreshLayout swipeLayout;
 	RecyclerView listview;
 	LinearLayoutManager llm;
@@ -50,14 +53,17 @@ public class CSContentActivity extends ActionBarActivity implements
 	private String argId;
 	private String argCount;
 	private String argTitle;
+	
 	private HistoryCSItem historyCSItem;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cs_content_main);
+
 		swipeLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
 		listview = (RecyclerView) findViewById(R.id.listview);
+		
 		llm = new LinearLayoutManager(this);
 		llm.setOrientation(LinearLayoutManager.VERTICAL);
 		listview.setLayoutManager(llm);
@@ -72,6 +78,7 @@ public class CSContentActivity extends ActionBarActivity implements
 		if (!cacheDir.exists())
 			cacheDir.mkdirs();
 		queue = Volley.newRequestQueue(this);
+
 		argId = getIntent().getStringExtra(ARG_ID);
 		argCount = getIntent().getStringExtra(ARG_COUNT);
 		argTitle = getIntent().getStringExtra(ARG_TITLE);
@@ -84,6 +91,7 @@ public class CSContentActivity extends ActionBarActivity implements
 		});
 		swipeLayout.setRefreshing(false);
 		listview.setOnScrollListener(new OnScrollListener() {
+
 			@Override
 			public void onScrollStateChanged(RecyclerView recyclerView,
 					int newState) {
@@ -93,12 +101,14 @@ public class CSContentActivity extends ActionBarActivity implements
 			@Override
 			public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
 				super.onScrolled(recyclerView, dx, dy);
-				if (dy > 5) {
+				if(dy > 5){
 					hideWhenScrollDown();
-				} else if (dy < -5) {
+				}
+				else if(dy < -5){
 					showWhenScrollUpOrHitBottom();
 				}
 			}
+			
 		});
 		refresh();
 	}
@@ -109,8 +119,7 @@ public class CSContentActivity extends ActionBarActivity implements
 	}
 
 	public void refresh() {
-		if (paraCurrentItem != null && paraCurrentItem.content != null
-				&& paraCurrentItem.content.length > 0) {
+		if(paraCurrentItem != null && paraCurrentItem.content != null && paraCurrentItem.content.length > 0){
 			updateData(paraCurrentItem.content);
 			return;
 		}
@@ -164,19 +173,19 @@ public class CSContentActivity extends ActionBarActivity implements
 					llm.scrollToPositionWithOffset(historyCSItem.pos,
 							historyCSItem.fromTop);
 				}
+
 			}
 		});
 	}
-
-	private int getInt(String v) {
-		try {
+	private int getInt(String v){
+		try{
 			return Integer.valueOf(v);
-		} catch (Exception e) {
+		}
+		catch(Exception e){
 			return 0;
 		}
 	}
-
-	private void updateData(final ContentItem[] d) {
+	private void updateData(final ContentItem[] d){
 		L("use local");
 		runOnUiThread(new Runnable() {
 			@Override
@@ -196,6 +205,7 @@ public class CSContentActivity extends ActionBarActivity implements
 					llm.scrollToPositionWithOffset(historyCSItem.pos,
 							historyCSItem.fromTop);
 				}
+
 			}
 		});
 	}
@@ -225,69 +235,65 @@ public class CSContentActivity extends ActionBarActivity implements
 	}
 
 	private class CSAdapter extends RecyclerView.Adapter<ViewHolder> {
-		final String blank = " ";
+		final String blank = "    ";
 		public List<ContentItem> data;
 
 		public void setData(ContentItem[] d) {
-			if (data == null) {
+			if(data == null){
 				data = new ArrayList<ContentItem>();
-			} else {
+			}
+			else{
 				data.clear();
 			}
-			for (ContentItem i : d) {
+			for(ContentItem i : d){
 				data.add(i);
 			}
 		}
 
 		@Override
 		public int getItemCount() {
-			return data == null ? 1 : data.size() + 1;
+			return data == null ? 1 : data.size()+1;
 		}
+		
 
 		@Override
-		public void onBindViewHolder(ViewHolder viewholder, final int position) {
-			if (position == 0 || position == getItemCount() - 1)
-				return;
-			viewholder.tvSetion.setText(data.get(position - 1).rank + ".");
-			int r = data.get(position - 1).getMyRank();
+		public void onBindViewHolder(ViewHolder viewholder,final int position) {
+			if(position == 0 || position == getItemCount()-1) return;
+			viewholder.tvSetion.setText(data.get(position-1).rank + ".");
+			int r = data.get(position-1).getMyRank();
 			if (r < 10) {
 				viewholder.tvContent.setText(blank + blank
-						+ data.get(position - 1).content);
+						+ data.get(position-1).content);
 			} else if (r < 100) {
 				viewholder.tvContent.setText(blank + blank + blank
-						+ data.get(position - 1).content);
+						+ data.get(position-1).content);
 			} else if (r < 1000) {
 				viewholder.tvContent.setText(blank + blank + blank + blank
-						+ data.get(position - 1).content);
+						+ data.get(position-1).content);
 			} else {
 				viewholder.tvContent.setText(blank + blank + blank + blank
-						+ blank + data.get(position - 1).content);
+						+ blank + data.get(position-1).content);
 			}
 		}
 
 		@Override
 		public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-			if (viewType == 0) {
-				View itemView = LayoutInflater.from(viewGroup.getContext())
-						.inflate(R.layout.empty, viewGroup, false);
+			if(viewType == 0){
+				View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.empty, viewGroup,false);
 				return new HeaderHolder(itemView);
 			}
-			if (viewType == 1) {
-				View itemView = LayoutInflater.from(viewGroup.getContext())
-						.inflate(R.layout.end, viewGroup, false);
+			if(viewType == 1){
+				View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.end, viewGroup,false);
 				return new HeaderHolder(itemView);
 			}
-			View itemView = LayoutInflater.from(viewGroup.getContext())
-					.inflate(R.layout.cell_cs_content_item, viewGroup, false);
+			View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cell_cs_content_item, viewGroup,false);
 			return new ViewHolder(itemView);
 		}
 
 		@Override
 		public int getItemViewType(int position) {
-			if (position == 0)
-				return 0;
-			if (position == getItemCount() - 1)
-				return 1;
+			if(position == 0) return 0;
+			if(position == getItemCount() - 1) return 1;
 			return 2;
 		};
 	}
@@ -306,8 +312,7 @@ public class CSContentActivity extends ActionBarActivity implements
 			tvContent = (TextView) itemView.findViewById(R.id.tv_content);
 		}
 	}
-
-	private class HeaderHolder extends ViewHolder {
+	private class HeaderHolder extends ViewHolder{
 		public HeaderHolder(View itemView) {
 			super(itemView);
 		}
@@ -325,7 +330,7 @@ public class CSContentActivity extends ActionBarActivity implements
 		intent.putExtra(ARG_TITLE, d.title);
 		c.startActivity(intent);
 	}
-
+	
 	public static CSItem paraCurrentItem;
 
 	@Override
@@ -335,15 +340,17 @@ public class CSContentActivity extends ActionBarActivity implements
 			if (child != null) {
 				int p = llm.getPosition(child);
 				int top = child.getTop();
-				if (historyCSItem == null) {
+				if(historyCSItem == null){
 					historyCSItem = new HistoryCSItem(argId, p, top);
-				} else {
+				}
+				else{
 					historyCSItem.pos = p;
 					historyCSItem.fromTop = top;
 				}
 				historyCSItem.save();
 			}
 		}
+
 		super.onBackPressed();
 	}
 
@@ -382,9 +389,11 @@ public class CSContentActivity extends ActionBarActivity implements
 
 	@Override
 	public void onTouchEnd() {
+
 	}
 
 	@Override
 	public void onTouchStart() {
+
 	}
 }

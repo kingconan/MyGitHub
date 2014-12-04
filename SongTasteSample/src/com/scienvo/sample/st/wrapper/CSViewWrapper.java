@@ -8,17 +8,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.v4.sourcecode.CircleImageView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.SimpleBitmapDisplayer;
-import com.scienvo.sample.st.DeviceUtil;
+import com.scienvo.sample.st.NetUtil;
 import com.scienvo.sample.st.OfflineDownloadService;
 import com.scienvo.sample.st.activity.CSContentActivity;
 import com.scienvo.sample.st.activity.CSContentActivity.ContentItem;
@@ -30,7 +27,7 @@ import com.travo.sample.st.R;
 
 public class CSViewWrapper extends BasePagerView implements
 		SwipeRefreshLayout.OnRefreshListener, OnLoadMoreListener {
-	RelativeLayout rootView;
+	View rootView;
 	Context context;
 	SwipeRefreshLayout swipeLayout;
 	LoadMoreListView listview;
@@ -46,22 +43,13 @@ public class CSViewWrapper extends BasePagerView implements
 
 	public CSViewWrapper(Context context) {
 		this.context = context;
-		rootView = (RelativeLayout)LayoutInflater.from(context).inflate(R.layout.csmain, null);
+		rootView = LayoutInflater.from(context).inflate(R.layout.csmain, null);
 		swipeLayout = (SwipeRefreshLayout) rootView
 				.findViewById(R.id.swipe_refresh);
 		listview = (LoadMoreListView) rootView.findViewById(R.id.listview);
 		swipeLayout.setColorSchemeResources(R.color.colorAccent);
 		swipeLayout.setOnRefreshListener(this);
 		listview.setOnLoadMoreListener(this);
-		
-		CircleImageView mCircleView = new CircleImageView(context, 0xFFFFFFFF, DeviceUtil.getPxByDp(50)/2);
-		RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(DeviceUtil.getPxByDp(50),DeviceUtil.getPxByDp(50) );
-		lp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-		lp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-		lp.bottomMargin = DeviceUtil.getPxByDp(12);
-		lp.rightMargin = DeviceUtil.getPxByDp(12);
-		mCircleView.setVisibility(View.VISIBLE);
-		rootView.addView(mCircleView, lp);
 		cacheDir = new File(
 				android.os.Environment.getExternalStorageDirectory(),
 				"Travo_SongTaste");
@@ -80,12 +68,9 @@ public class CSViewWrapper extends BasePagerView implements
 				.displayer(new SimpleBitmapDisplayer()) // default
 				.build();
 
-		mCircleView.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				OfflineDownloadService.start(model.getData());				
-			}
-		});
+//		if (NetUtil.isWifiConnected(context)) {
+//			OfflineDownloadService.start();
+//		}
 	}
 
 	private void L(String msg) {
