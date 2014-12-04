@@ -561,88 +561,6 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int expandActivityOverflowButtonDrawable=0x7f010085;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int fab_addButtonColorNormal=0x7f0100af;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int fab_addButtonColorPressed=0x7f0100ae;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int fab_addButtonPlusIconColor=0x7f0100b0;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int fab_colorNormal=0x7f0100aa;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int fab_colorPressed=0x7f0100a9;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>up</code></td><td>0</td><td></td></tr>
-<tr><td><code>down</code></td><td>1</td><td></td></tr>
-<tr><td><code>left</code></td><td>2</td><td></td></tr>
-<tr><td><code>right</code></td><td>3</td><td></td></tr>
-</table>
-         */
-        public static final int fab_expandDirection=0x7f0100b1;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int fab_icon=0x7f0100ab;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int fab_plusIconColor=0x7f0100ad;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>normal</code></td><td>0</td><td></td></tr>
-<tr><td><code>mini</code></td><td>1</td><td></td></tr>
-</table>
-         */
-        public static final int fab_size=0x7f0100ac;
         /**  The max gap between the bars when they are parallel to each other 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -1660,15 +1578,6 @@ containing a value of this type.
         public static final int dialog_fixed_width_minor=0x7f0a000d;
         public static final int disabled_alpha_material_dark=0x7f0a0001;
         public static final int disabled_alpha_material_light=0x7f0a0000;
-        public static final int fab_actions_spacing=0x7f0a0033;
-        public static final int fab_icon_size=0x7f0a002d;
-        public static final int fab_plus_icon_size=0x7f0a002e;
-        public static final int fab_plus_icon_stroke=0x7f0a002f;
-        public static final int fab_shadow_offset=0x7f0a0030;
-        public static final int fab_shadow_radius=0x7f0a0031;
-        public static final int fab_size_mini=0x7f0a002c;
-        public static final int fab_size_normal=0x7f0a002b;
-        public static final int fab_stroke_width=0x7f0a0032;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_holo_dark=0x7f020000;
@@ -1723,102 +1632,95 @@ containing a value of this type.
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020031;
         public static final int abc_textfield_search_material=0x7f020032;
         public static final int costum_progress_bar=0x7f020033;
-        public static final int fab_bg_mini=0x7f020034;
-        public static final int fab_bg_normal=0x7f020035;
-        public static final int ic_launcher=0x7f020036;
+        public static final int ic_launcher=0x7f020034;
     }
     public static final class id {
-        public static final int action_bar=0x7f070036;
+        public static final int action_bar=0x7f070031;
         public static final int action_bar_activity_content=0x7f070018;
-        public static final int action_bar_container=0x7f070035;
-        public static final int action_bar_root=0x7f070031;
+        public static final int action_bar_container=0x7f070030;
+        public static final int action_bar_root=0x7f07002c;
         public static final int action_bar_spinner=0x7f070017;
-        public static final int action_bar_subtitle=0x7f070024;
-        public static final int action_bar_title=0x7f070023;
-        public static final int action_context_bar=0x7f070037;
+        public static final int action_bar_subtitle=0x7f07001f;
+        public static final int action_bar_title=0x7f07001e;
+        public static final int action_context_bar=0x7f070032;
         public static final int action_menu_divider=0x7f07001a;
         public static final int action_menu_presenter=0x7f07001b;
-        public static final int action_mode_bar=0x7f070033;
-        public static final int action_mode_bar_stub=0x7f070032;
-        public static final int action_mode_close_button=0x7f070025;
-        public static final int activity_chooser_view_content=0x7f070026;
+        public static final int action_mode_bar=0x7f07002e;
+        public static final int action_mode_bar_stub=0x7f07002d;
+        public static final int action_mode_close_button=0x7f070020;
+        public static final int activity_chooser_view_content=0x7f070021;
         public static final int always=0x7f07000d;
         public static final int beginning=0x7f070012;
-        public static final int btn_next=0x7f07005a;
-        public static final int btn_play=0x7f070059;
-        public static final int btn_pre=0x7f07005b;
-        public static final int checkbox=0x7f07002e;
+        public static final int btn_next=0x7f070055;
+        public static final int btn_play=0x7f070054;
+        public static final int btn_pre=0x7f070056;
+        public static final int checkbox=0x7f070029;
         public static final int collapseActionView=0x7f07000f;
-        public static final int decor_content_parent=0x7f070034;
-        public static final int default_activity_button=0x7f070029;
+        public static final int decor_content_parent=0x7f07002f;
+        public static final int default_activity_button=0x7f070024;
         public static final int dialog=0x7f070010;
         public static final int disableHome=0x7f07000a;
-        public static final int down=0x7f07001f;
         public static final int dropdown=0x7f070011;
-        public static final int edit_query=0x7f070038;
+        public static final int edit_query=0x7f070033;
         public static final int end=0x7f070014;
-        public static final int expand_activities_button=0x7f070027;
-        public static final int expanded_menu=0x7f07002d;
-        public static final int fab_expand_menu_button=0x7f070022;
+        public static final int expand_activities_button=0x7f070022;
+        public static final int expanded_menu=0x7f070028;
         public static final int home=0x7f070015;
         public static final int homeAsUp=0x7f070007;
-        public static final int icon=0x7f07002b;
+        public static final int icon=0x7f070026;
         public static final int ifRoom=0x7f07000c;
-        public static final int image=0x7f070028;
-        public static final int iv_thumb=0x7f070046;
-        public static final int left=0x7f070020;
+        public static final int image=0x7f070023;
+        public static final int iv_thumb=0x7f070041;
         public static final int listMode=0x7f070002;
-        public static final int list_item=0x7f07002a;
-        public static final int listview=0x7f07004c;
-        public static final int load_more_footer=0x7f07004f;
-        public static final int load_more_progressBar=0x7f070051;
+        public static final int list_item=0x7f070025;
+        public static final int listview=0x7f070047;
+        public static final int load_more_footer=0x7f07004a;
+        public static final int load_more_progressBar=0x7f07004c;
         public static final int middle=0x7f070013;
-        public static final int mini=0x7f07001e;
         public static final int never=0x7f07000b;
-        public static final int no_more_textView=0x7f070052;
+        public static final int no_more_textView=0x7f07004d;
         public static final int none=0x7f070004;
         public static final int normal=0x7f070001;
         public static final int progress_circular=0x7f07001c;
         public static final int progress_horizontal=0x7f07001d;
-        public static final int progressbar=0x7f07005c;
-        public static final int radio=0x7f070030;
-        public static final int right=0x7f070021;
-        public static final int rl_bottom=0x7f070058;
-        public static final int search_badge=0x7f07003a;
-        public static final int search_bar=0x7f070039;
-        public static final int search_button=0x7f07003b;
-        public static final int search_close_btn=0x7f070040;
-        public static final int search_edit_frame=0x7f07003c;
-        public static final int search_go_btn=0x7f070042;
-        public static final int search_mag_icon=0x7f07003d;
-        public static final int search_plate=0x7f07003e;
-        public static final int search_src_text=0x7f07003f;
-        public static final int search_voice_btn=0x7f070043;
-        public static final int shortcut=0x7f07002f;
+        public static final int progressbar=0x7f070057;
+        public static final int radio=0x7f07002b;
+        public static final int rl_bottom=0x7f070053;
+        public static final int search_badge=0x7f070035;
+        public static final int search_bar=0x7f070034;
+        public static final int search_button=0x7f070036;
+        public static final int search_close_btn=0x7f07003b;
+        public static final int search_edit_frame=0x7f070037;
+        public static final int search_go_btn=0x7f07003d;
+        public static final int search_mag_icon=0x7f070038;
+        public static final int search_plate=0x7f070039;
+        public static final int search_src_text=0x7f07003a;
+        public static final int search_voice_btn=0x7f07003e;
+        public static final int shortcut=0x7f07002a;
         public static final int showCustom=0x7f070009;
         public static final int showHome=0x7f070006;
         public static final int showTitle=0x7f070008;
         public static final int split_action_bar=0x7f070019;
-        public static final int submit_area=0x7f070041;
-        public static final int swipe_refresh=0x7f07004b;
-        public static final int tab1=0x7f070053;
-        public static final int tab2=0x7f070054;
-        public static final int tab3=0x7f070055;
-        public static final int tab4=0x7f070056;
+        public static final int submit_area=0x7f07003c;
+        public static final int swipe_refresh=0x7f070046;
+        public static final int tab1=0x7f07004e;
+        public static final int tab2=0x7f07004f;
+        public static final int tab3=0x7f070050;
+        public static final int tab4=0x7f070051;
         public static final int tabMode=0x7f070003;
-        public static final int title=0x7f07002c;
-        public static final int top_line=0x7f070050;
-        public static final int tv_content=0x7f070045;
-        public static final int tv_cstitle=0x7f07004d;
-        public static final int tv_des=0x7f070048;
-        public static final int tv_name=0x7f070047;
-        public static final int tv_section=0x7f070044;
-        public static final int tv_singer=0x7f07004a;
-        public static final int tv_time=0x7f070049;
-        public static final int tv_title=0x7f07004e;
+        public static final int title=0x7f070027;
+        public static final int top_line=0x7f07004b;
+        public static final int tv_content=0x7f070040;
+        public static final int tv_cstitle=0x7f070048;
+        public static final int tv_des=0x7f070043;
+        public static final int tv_name=0x7f070042;
+        public static final int tv_section=0x7f07003f;
+        public static final int tv_singer=0x7f070045;
+        public static final int tv_time=0x7f070044;
+        public static final int tv_title=0x7f070049;
         public static final int up=0x7f070016;
         public static final int useLogo=0x7f070005;
-        public static final int viewpager=0x7f070057;
+        public static final int viewpager=0x7f070052;
         public static final int withText=0x7f07000e;
         public static final int wrap_content=0x7f070000;
     }
@@ -3017,34 +2919,6 @@ containing a value of this type.
           @attr name com.travo.sample.st:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
-        /** Attributes that can be used with a AddFloatingActionButton.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AddFloatingActionButton_fab_plusIconColor com.travo.sample.st:fab_plusIconColor}</code></td><td></td></tr>
-           </table>
-           @see #AddFloatingActionButton_fab_plusIconColor
-         */
-        public static final int[] AddFloatingActionButton = {
-            0x7f0100ad
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.travo.sample.st.R.attr#fab_plusIconColor}
-          attribute's value can be found in the {@link #AddFloatingActionButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.travo.sample.st:fab_plusIconColor
-        */
-        public static final int AddFloatingActionButton_fab_plusIconColor = 0;
         /** Attributes that can be used with a CompatTextView.
            <p>Includes the following attributes:</p>
            <table>
@@ -3240,165 +3114,6 @@ containing a value of this type.
           @attr name com.travo.sample.st:topBottomBarArrowSize
         */
         public static final int DrawerArrowToggle_topBottomBarArrowSize = 4;
-        /** Attributes that can be used with a FloatingActionButton.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_colorNormal com.travo.sample.st:fab_colorNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_colorPressed com.travo.sample.st:fab_colorPressed}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_icon com.travo.sample.st:fab_icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fab_size com.travo.sample.st:fab_size}</code></td><td></td></tr>
-           </table>
-           @see #FloatingActionButton_fab_colorNormal
-           @see #FloatingActionButton_fab_colorPressed
-           @see #FloatingActionButton_fab_icon
-           @see #FloatingActionButton_fab_size
-         */
-        public static final int[] FloatingActionButton = {
-            0x7f0100a9, 0x7f0100aa, 0x7f0100ab, 0x7f0100ac
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.travo.sample.st.R.attr#fab_colorNormal}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.travo.sample.st:fab_colorNormal
-        */
-        public static final int FloatingActionButton_fab_colorNormal = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.travo.sample.st.R.attr#fab_colorPressed}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.travo.sample.st:fab_colorPressed
-        */
-        public static final int FloatingActionButton_fab_colorPressed = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.travo.sample.st.R.attr#fab_icon}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.travo.sample.st:fab_icon
-        */
-        public static final int FloatingActionButton_fab_icon = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.travo.sample.st.R.attr#fab_size}
-          attribute's value can be found in the {@link #FloatingActionButton} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>normal</code></td><td>0</td><td></td></tr>
-<tr><td><code>mini</code></td><td>1</td><td></td></tr>
-</table>
-          @attr name com.travo.sample.st:fab_size
-        */
-        public static final int FloatingActionButton_fab_size = 3;
-        /** Attributes that can be used with a FloatingActionsMenu.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #FloatingActionsMenu_fab_addButtonColorNormal com.travo.sample.st:fab_addButtonColorNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionsMenu_fab_addButtonColorPressed com.travo.sample.st:fab_addButtonColorPressed}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionsMenu_fab_addButtonPlusIconColor com.travo.sample.st:fab_addButtonPlusIconColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionsMenu_fab_expandDirection com.travo.sample.st:fab_expandDirection}</code></td><td></td></tr>
-           </table>
-           @see #FloatingActionsMenu_fab_addButtonColorNormal
-           @see #FloatingActionsMenu_fab_addButtonColorPressed
-           @see #FloatingActionsMenu_fab_addButtonPlusIconColor
-           @see #FloatingActionsMenu_fab_expandDirection
-         */
-        public static final int[] FloatingActionsMenu = {
-            0x7f0100ae, 0x7f0100af, 0x7f0100b0, 0x7f0100b1
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.travo.sample.st.R.attr#fab_addButtonColorNormal}
-          attribute's value can be found in the {@link #FloatingActionsMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.travo.sample.st:fab_addButtonColorNormal
-        */
-        public static final int FloatingActionsMenu_fab_addButtonColorNormal = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.travo.sample.st.R.attr#fab_addButtonColorPressed}
-          attribute's value can be found in the {@link #FloatingActionsMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.travo.sample.st:fab_addButtonColorPressed
-        */
-        public static final int FloatingActionsMenu_fab_addButtonColorPressed = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.travo.sample.st.R.attr#fab_addButtonPlusIconColor}
-          attribute's value can be found in the {@link #FloatingActionsMenu} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.travo.sample.st:fab_addButtonPlusIconColor
-        */
-        public static final int FloatingActionsMenu_fab_addButtonPlusIconColor = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.travo.sample.st.R.attr#fab_expandDirection}
-          attribute's value can be found in the {@link #FloatingActionsMenu} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>up</code></td><td>0</td><td></td></tr>
-<tr><td><code>down</code></td><td>1</td><td></td></tr>
-<tr><td><code>left</code></td><td>2</td><td></td></tr>
-<tr><td><code>right</code></td><td>3</td><td></td></tr>
-</table>
-          @attr name com.travo.sample.st:fab_expandDirection
-        */
-        public static final int FloatingActionsMenu_fab_expandDirection = 3;
         /** Attributes that can be used with a LinearLayoutCompat.
            <p>Includes the following attributes:</p>
            <table>
