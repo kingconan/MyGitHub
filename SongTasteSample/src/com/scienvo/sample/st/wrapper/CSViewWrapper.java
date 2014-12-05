@@ -83,7 +83,7 @@ public class CSViewWrapper extends BasePagerView implements
 		mCircleView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				OfflineDownloadService.start(model.getData());				
+				OfflineDownloadService.start(adapter.data);				
 			}
 		});
 	}

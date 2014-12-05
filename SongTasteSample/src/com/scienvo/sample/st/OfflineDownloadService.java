@@ -29,6 +29,7 @@ public class OfflineDownloadService extends IntentService{
 	@Override
 	protected void onHandleIntent(Intent intent) {
 		L("onHandleIntent");
+		queue = Volley.newRequestQueue(MyApplication.getSugarContext()); 
 		final int page = 1;
 		String url = "http://www.weiduwu.net/app/getContentList.json";
 		final String contentUrl = "http://www.weiduwu.net/app/getContentByid.json";

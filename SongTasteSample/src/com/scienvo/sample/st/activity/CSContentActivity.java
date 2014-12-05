@@ -330,20 +330,6 @@ public class CSContentActivity extends ActionBarActivity implements
 
 	@Override
 	public void onBackPressed() {
-		if (listview != null) {
-			View child = listview.getChildAt(0);
-			if (child != null) {
-				int p = llm.getPosition(child);
-				int top = child.getTop();
-				if (historyCSItem == null) {
-					historyCSItem = new HistoryCSItem(argId, p, top);
-				} else {
-					historyCSItem.pos = p;
-					historyCSItem.fromTop = top;
-				}
-				historyCSItem.save();
-			}
-		}
 		super.onBackPressed();
 	}
 
@@ -387,4 +373,25 @@ public class CSContentActivity extends ActionBarActivity implements
 	@Override
 	public void onTouchStart() {
 	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		if (listview != null) {
+			View child = listview.getChildAt(0);
+			if (child != null) {
+				int p = llm.getPosition(child);
+				int top = child.getTop();
+				if (historyCSItem == null) {
+					historyCSItem = new HistoryCSItem(argId, p, top);
+				} else {
+					historyCSItem.pos = p;
+					historyCSItem.fromTop = top;
+				}
+				historyCSItem.save();
+			}
+		}
+	}
+
+	
 }
